@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Micro-prêts entre collègues</title>
+  <style>
+    :root {
+      --primary: #6a11cb;
+      --secondary: #2575fc;
+      --accent: #f093fb;
+      --danger: #ff6b6b;
+      --success: #00b894;
+      --dark: #2d3436;
+      --light: #f1f2f6;
+      --text: #2f3542;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border: 1px solid #dcdde1;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .emoji {
+      font-size: 1.4em;
+      vertical-align: middle;
+    }
+
+    .description {
+      padding: 24px;
+      background: var(--light);
+      text-align: center;
+      font-size: 1.05em;
+      line-height: 1.7;
+      border-bottom: 1px solid #dcdde1;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 18px;
+      text-align: center;
+      border-bottom: 1px solid #ecf0f1;
+    }
+
+    th {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f5ff;
+    }
+
+    .highlight-profit {
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    .highlight-amount {
+      color: var(--secondary);
+      font-weight: bold;
+    }
+
+    .rate-cell {
+      position: relative;
+    }
+
+    .rate-cell::after {
+      content: "↓";
+      color: var(--danger);
+      position: absolute;
+      right: 10px;
+      font-weight: bold;
+    }
+
+    .footer {
+      background: linear-gradient(135deg, var(--dark), #636e72);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 0.95em;
+    }
+
+    .footer a {
+      color: #ffeaa7;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      th, td {
+        padding: 12px 8px;
+        font-size: 0.9em;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      .description {
+        padding: 18px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Micro-prêts entre collègues <span class="emoji">💸</span></h1>
+    </header>
+
+    <div class="description">
+      Désormais, je prête jusqu'à 10 000 FCFA pour vous aider en cas de petit problème urgent <span class="emoji">💸</span>. 
+      <br>Il y a juste un petit intérêt, histoire que moi aussi je puisse manger mon riz haricot <span class="emoji">🍚😄</span>.
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Montant prêté</th>
+          <th>Taux d'intérêt</th>
+          <th>Bénéfice (riz + haricot)</th>
+          <th>Total à rembourser</th>
+          <th>Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="highlight-amount">10 000 FCFA</td>
+          <td class="rate-cell">4%</td>
+          <td class="highlight-profit">+400 FCFA</td>
+          <td class="highlight-amount">10 400 FCFA</td>
+          <td>1 mois</td>
+        </tr>
+        <tr>
+          <td class="highlight-amount">5 000 FCFA</td>
+          <td class="rate-cell">5%</td>
+          <td class="highlight-profit">+250 FCFA</td>
+          <td class="highlight-amount">5 250 FCFA</td>
+          <td>1 mois</td>
+        </tr>
+        <tr>
+          <td class="highlight-amount">2 000 FCFA</td>
+          <td class="rate-cell">10%</td>
+          <td class="highlight-profit">+200 FCFA</td>
+          <td class="highlight-amount">2 200 FCFA</td>
+          <td>1 mois</td>
+        </tr>
+        <tr>
+          <td class="highlight-amount">1 000 FCFA</td>
+          <td class="rate-cell">15%</td>
+          <td class="highlight-profit">+150 FCFA</td>
+          <td class="highlight-amount">1 150 FCFA</td>
+          <td>1 mois</td>
+        </tr>
+        <tr>
+          <td class="highlight-amount">500 FCFA</td>
+          <td class="rate-cell">20%</td>
+          <td class="highlight-profit">+100 FCFA</td>
+          <td class="highlight-amount">600 FCFA</td>
+          <td>1 mois</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      Besoin d'un prêt ? Contactez-moi en privé | <a href="tel:+123456789">📞 Appeler</a>
+    </div>
+  </div>
+</body>
+</html>
